@@ -1,18 +1,18 @@
 --2. EMP 테이블에서 급여가 3000이상인 사원의 정보를 사원번호,이름,담당업무,급여를 출력하는 SELECT 문장을 작성하시오.
 SELECT EMPNO,ENAME,JOB,SAL 
 FROM EMP 
-WHERE SAL>='3000';
+WHERE SAL>=3000;
 
 --3. EMP 테이블에서 사원번호가 7782인 사원의 이름과 부서번호를 출력하는 SELECT 문장을 작성하시오.
 SELECT ENAME, DEPTNO
 FROM EMP
-WHERE EMPNO = '7782';
+WHERE EMPNO = 7782;
 
 --4. EMP 테이블에서 입사일이 February 20, 1981과 May 1, 1981 사이에 입사한 사원의 이름,업무,입사일을 출력하는 SELECT 문장을 작성하시오.
 -- 단 입사일 순으로 출력하시오.
 SELECT ENAME,JOB,HIREDATE
 FROM EMP
-WHERE HIREDATE BETWEEN '1981-02-20' AND '1981-05-01';
+WHERE HIREDATE BETWEEN '1981/02/20' AND '1981/05//01';
 
 --5. EMP 테이블에서 부서번호가 10,20인 사원의 모든 정보를 출력하는 SELECT 문장을 작성하시오. 단 이름순으로 정렬하여라.
 SELECT *
@@ -22,7 +22,7 @@ ORDER BY ENAME;
 
 --6. EMP 테이블에서 급여가 1500이상이고 부서번호가 10,30인 사원의 이름과 급여를 출력하는 SELECT 문장을 작성하여라. 
 --단 HEADING을 Employee과 Monthly Salary로 출력하여라.
-SELECT ENAME, SAL
+SELECT ENAME AS "Employee", SAL "Monthly Salary"
 FROM EMP
 WHERE SAL >= '1500' AND DEPTNO IN(10,30);
 
