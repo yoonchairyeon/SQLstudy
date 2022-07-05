@@ -46,3 +46,5 @@ SELECT *
 FROM EMP
 WHERE (JOB = 'CLERK' OR JOB = 'ANALYST') AND(SAL NOT IN(1000,3000,5000));
 
+--11. EMP 테이블에서 이름에 L이 두 자가 있고  부서가 30이거나 또는 관리자가 7782인 사원의 모든 정보를 출력하는 SELECT 문을 작성하여라.
+SELECT * FROM EMP WHERE ENAME LIKE '%L%L%' AND (DEPTNO=30 OR MGR=7782);
